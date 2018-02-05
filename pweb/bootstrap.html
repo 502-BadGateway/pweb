@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<title>Protecter&Gamble 客服会话数据分析</title>
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<!--highcharts资源-->
+	<script src="https://img.hcharts.cn/jquery/jquery-1.8.2.min.js"></script>
+	<script src="https://img.hcharts.cn/highcharts/highcharts.js"></script>
+	<script src="https://img.hcharts.cn/highcharts/modules/exporting.js"></script>
+	<script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+	<!--highcharts资源-->
+	
+	<!--echarts资源-->
+	<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+	<!--echarts资源-->
+	
+</head>
+<body>
+
+<!--header start-->
+<div class="container-fluid">
+	<div class="row-fluie">
+	<div class="row">
+	<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#">Protecter&Gamble </a>
+    </div>
+    <div>
+        <ul class="nav navbar-nav">
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            
+        </ul>
+    </div>
+    </div>
+	</nav>
+	</div>
+	</div>
+</div>
+<!--header end-->
+
+<!--main content start-->
+<div class="container-fluid">
+	
+	<div class="row-fluie">
+	<div class="row">
+	
+	<!--sidebar start-->
+	<div class="col-md-2">
+		
+		<p>Protecter&Gamble</p>
+			<ul class="nav nav-pills nav-stacked">
+			  <li class="active"><a href="bootstrap.html">概览</a></li>
+			  <li>
+                <a href="customer.html"><i class="customer"></i> 客户挖掘</a>
+              </li>
+			  <li><a href="goods.html">商品挖掘</a></li>
+			  <li><a href="content.html">客户满意度</a></li>
+			  <li><a href="public.html">舆情分析</a></li>
+			  <li><a href="#">后台管理</a></li>
+			</ul>
+	</div>
+	<!--sidebar end-->
+	
+	
+	<div class="col-md-1"></div>
+
+	<!--time controller start-->
+	<div class="col-md-5">
+		<div class="row">
+		<div class="col-lg-6">
+		  <div class="form-group" >
+		    <label  for="datetime">startTime</label>
+		    <input id="startTime" type="text" class="form-control" id="datetime" placeholder="请输入起始日期:2017/11/1">
+			  </div>
+			  </div>
+
+			  <div class="col-lg-6">
+		    <div class="form-group" >
+		    <label  for="datetime">endTime</label>
+		    <input id="endTime" type="text" class="form-control" id="datetime" placeholder="请输入结束日期:2017/11/1">
+		  </div>
+		  </div>
+		  </div>
+		  
+		
+		  <button type="reset" class="btn btn-default" onclick=consult() >咨询</button>
+		  <button type="reset" class="btn btn-default" onclick=complain() >投诉</button>
+		  <button type="reset" class="btn btn-default" onclick=praise() >表扬</button>
+		  <button type="reset" class="btn btn-default" onclick=service() >服务</button>
+		
+	</div>
+	<!--time controller end-->
+
+	<!--chart start-->
+	<div class="col-md-8">
+		<div id="container" style="height:400px"></div>
+	</div>
+	<!--chart end-->
+	
+	</div>
+	</div>
+</div>
+<!--main content end-->
+
+<!-- javascripts -->
+<!-- draw charts -->
+<script src="js/class.js"></script>
+
+</body>
+</html>
